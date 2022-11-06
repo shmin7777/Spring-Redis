@@ -1,5 +1,6 @@
 
 ## Redis의 자료구조 
+![image](https://user-images.githubusercontent.com/67637716/200158365-e266b15f-e7d0-4c5d-968e-5e282eb0dce8.png)  
 다양한 데이터 유형에 매핑되는 키를 저장할 수 있다.  
 기본적인 데이터 유형은 String으로 text또는 이진 데이터가 이에 해당하며 최대 크기는 512MB이다.  
 문자열이 추가된 순서대로 유지되는 `List of Strings`, `Sets of unordered Strings`  
