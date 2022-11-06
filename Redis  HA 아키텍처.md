@@ -23,5 +23,25 @@
 ### 레디스 클러스터(Cluster) : HA, 무중단 서비스 가능
 ![image](https://user-images.githubusercontent.com/67637716/200158902-82ee2d80-e832-42fa-9f9c-00f1e2d451ee.png)  
 
+* master를 여러개 두어 분산 저장이 가능하며(Sharding), scale out 이 가능하다.
+서버를 늘릴수록 저장할수 있는 공간이 무한대로 커진다. 
+* master에 하나 이상의 slave 를 둘 수 있다.
+* master 1,2,3 이 있다면 데이터는 3개중에 하나에 저장되며, client 가 데이터 읽기 요청시 저장된 곳이 아닌 다른 마스터에 요청 했다면 저장된 마스터 정보를 알려주며, 클라이언트는 전달받은 마스터 정보에 다시 요청해서 데이터를 받아와야 한다.
+  * But, 해당 부분은 redis-cluster 를 지원하는 라이브러리에서 다 해준다.
+
+![image](https://user-images.githubusercontent.com/67637716/200159048-33f9a72a-41fc-4338-9f13-dc7f812455bd.png)  
+
+* slave 가 죽어서 복제 노드가 없는 마스터가 생길시 다른 마스터 노드에 여유분이 있다면 해당 노드로 빈자리를 채울 수 있다.
+  * 사용자가 개입하지 않고 클러스터가 알아서 다 해준다.  
+![image](https://user-images.githubusercontent.com/67637716/200159061-b1a13107-f9ad-41ba-8bfb-09da3536199f.png)  
+
+* 마스터가 죽었을 시 Slave가 master로 자동 failover된다.
+* 최소 3개의 마스터 노드가 있어야 구성가능
+* 센티널이 노드를 감시했지만, 클러스터에서는 모든 노드가 서로 감시
 
 
+✔ 참고
+
+- scale up : 단일 서버의 스펙을 올려 서버 성능을 높힌다.
+
+- scale out : 서버를 추가하여 서버 성능을 높힌다.
