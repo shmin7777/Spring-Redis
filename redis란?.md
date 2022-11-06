@@ -68,7 +68,7 @@ Redis를 운영중 잘못된 로직으로 캐시 데이터가 잘못 캐싱되�
 캐싱하고자 하는 데이터 저장소의 데이터가 서로 일치하는 지 주기적인 모니터링과 이를 방지하기 위한 사내 솔루션을 개발하는 것이 좋음.  
 
 ## Redis 설치
-https://jjeongil.tistory.com/1428  
+https://bstar36.tistory.com/361
 
 
 
