@@ -12,12 +12,8 @@
 
 <br>
 
-commit, overcommit에 대한 내용  
-```  
-
-
-```
-
+## Redis 설치
+https://jjeongil.tistory.com/1428  
 
 ## Redis의 자료구조 
 다양한 데이터 유형에 매핑되는 키를 저장할 수 있다.  
@@ -29,3 +25,5 @@ commit, overcommit에 대한 내용
 
 #### String
 String 자료형은 단순히 Key/Value 형태가 값을 저장한다.
+
+출처 : https://www.psjco.com/26
