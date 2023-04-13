@@ -63,3 +63,7 @@ redis-cli -h [레디스 서버의 IP주소] -p [포트번호] -a [비밀번호]
 
 9. Redis 설치한 서버에서 로그 확인
 tail -f /var/log/redis/redis.log
+
+
+# 설정 
+https://ozofweird.tistory.com/entry/Redis-Redis-%EC%84%A4%EC%A0%95-%ED%8C%8C%EC%9D%BC  
