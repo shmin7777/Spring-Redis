@@ -3,4 +3,5 @@
 
 
 ## reference
-http://redisgate.kr/redis/server/server_cmd_intro.php  
+https://docs.spring.io/spring-data/data-redis/docs/current/reference/html/  
+http://redisgate.kr/redis/server/server_cmd_intro.php    
