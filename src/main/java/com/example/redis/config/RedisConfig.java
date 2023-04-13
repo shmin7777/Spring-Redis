@@ -41,6 +41,10 @@ public class RedisConfig {
     @Bean
     RedisTemplate<?, ?> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
         RedisTemplate<?, ?> template = new RedisTemplate<>();
+
+        // setKeySerializer, setValueSerializer 설정해주는 이유는 RedisTemplate를 사용할 때
+        // Spring - Redis 간 데이터 직렬화, 역직렬화 시 사용하는 방식이 Jdk 직렬화 방식이기 때문
+        // 동작에는 문제가 없지만 redis-cli을 통해 직접 데이터를 보려고 할 때 알아볼 수 없는 형태로 출력되기 때문
         template.setKeySerializer(new StringRedisSerializer());
         template.setValueSerializer(new StringRedisSerializer());
         template.setConnectionFactory(redisConnectionFactory);
